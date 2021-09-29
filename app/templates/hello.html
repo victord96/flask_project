@@ -14,12 +14,18 @@ Welcome
 {% if user_ip %}
 <h3>Your IP is {{user_ip}}</h3>
 {% else %}
-<a href="{{url_for('index')}}">Ir a inicio</a>
+<a href="{{url_for('index')}}">Return to main</a>
 {% endif %}
 
-<ul>
+<div class="container">
+    <h2>Create new task</h2>
+
+    {{ wtf.quick_form(todo_form)}}
+</div>
+
+<ul class="list-group">
     {% for todo in todos %}
-        {{ macros.render_todo(todo)}}
+        {{ macros.render_todo(todo, delete_form, update_form)}}
     {% endfor %}
 </ul>
 {% endblock %}

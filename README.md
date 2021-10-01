@@ -4,7 +4,7 @@ I have created a project based on Python with Flask microframework implementatio
 
 My goal is to create a "to do" application that helps the user writing tasks to be done, like some kind of online notepad.
 
-The app is divided into two main parts:
+The app is divided in two main parts:
 
 1. Login
 
